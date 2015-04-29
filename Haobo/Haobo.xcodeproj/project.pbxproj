@@ -16,6 +16,7 @@
 		FD1AAD731AEFB4F000CB55D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD1AAD721AEFB4F000CB55D4 /* Images.xcassets */; };
 		FD1AAD761AEFB4F000CB55D4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1AAD741AEFB4F000CB55D4 /* LaunchScreen.xib */; };
 		FD1AAD821AEFB4F000CB55D4 /* HaoboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD1AAD811AEFB4F000CB55D4 /* HaoboTests.m */; };
+		FD50EDA01AF11BB90045DE69 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FD50ED9F1AF11BB90045DE69 /* HttpClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		FD1AAD7B1AEFB4F000CB55D4 /* HaoboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HaoboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD1AAD801AEFB4F000CB55D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD1AAD811AEFB4F000CB55D4 /* HaoboTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HaoboTests.m; sourceTree = "<group>"; };
+		FD50ED9E1AF11BB90045DE69 /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
+		FD50ED9F1AF11BB90045DE69 /* HttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,7 @@
 		FD1AAD611AEFB4F000CB55D4 /* Haobo */ = {
 			isa = PBXGroup;
 			children = (
+				FD50ED9D1AF11AFF0045DE69 /* Network */,
 				FD1AAD661AEFB4F000CB55D4 /* AppDelegate.h */,
 				FD1AAD671AEFB4F000CB55D4 /* AppDelegate.m */,
 				FD1AAD6C1AEFB4F000CB55D4 /* ViewController.h */,
@@ -144,6 +148,15 @@
 				FD1AAD801AEFB4F000CB55D4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FD50ED9D1AF11AFF0045DE69 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FD50ED9E1AF11BB90045DE69 /* HttpClient.h */,
+				FD50ED9F1AF11BB90045DE69 /* HttpClient.m */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +296,7 @@
 			files = (
 				FD1AAD681AEFB4F000CB55D4 /* AppDelegate.m in Sources */,
 				FD1AAD6B1AEFB4F000CB55D4 /* Haobo.xcdatamodeld in Sources */,
+				FD50EDA01AF11BB90045DE69 /* HttpClient.m in Sources */,
 				FD1AAD6E1AEFB4F000CB55D4 /* ViewController.m in Sources */,
 				FD1AAD651AEFB4F000CB55D4 /* main.m in Sources */,
 			);
@@ -408,8 +422,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Haobo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
 		};
@@ -419,8 +435,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Haobo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
 		};
